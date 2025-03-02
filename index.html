@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#f4f7ff]">
+
+
+    <nav class=" flex items-center justify-between md:container md:mx-auto flex-wrap pb-10 bg-white p-4 mt-10">
+
+        <div>
+
+
+            <img src="./images/logo.png">
+        </div>
+
+
+        <p class="flex-1 text-4xl">Dev <span><b>Board</b></span></p>
+
+        <div class="flex gap-4">
+            <img src="images/checkbox.png ">
+            <p class="text-4xl "><b class="total-count">23</b></p>
+            <img id="theme-btn" src="./images/theme-btn.png ">
+        </div>
+
+
+
+
+    </nav>
+
+
+
+    </div>
+
+
+    <section class="flex p-4 bg-white">
+
+
+
+        <div class="relative left-14 bg-[#f4f7ff] w-70 h-25 ">
+            <div class=" flex bg-[#f4f7ff]">
+                <img class="justify-center " src="./images/checkbox.png ">
+                <p class="relative left-10">Task Assigned</p>
+            </div>
+            <p class="text-4xl relative left-20"><b class="task-count">05</p></b>
+        </div>
+
+        <button id="discoverBtn" class="bg-[#9BA8F8] w-130 h-25 rounded-lg text-white text-center">
+            <div class="flex relative left-35">
+                <img src="./images/board.png">
+                <div>
+                    <p class="text-white text-2xl">Discover Something</p>
+                    <p class="text-white text-2xl">New Today!</p>
+                </div>
+            </div>
+        </button>
+
+
+        </div>
+
+
+
+
+        <div class="bg-[#f4f7ff] w-90 h-25 rounded-lg text-black text-center relative left-25">
+            <div class="flex relative left-16 ">
+                <img src="./images/calender.png ">
+                <div class="ml-10 ">
+                    <p class="text-2xl ">Wed,</p>
+                    <p class="text-2xl "><b>July 28, 2025!</b></p>
+                </div>
+            </div>
+
+
+            <div class="bg-[white] w-full h-250 rounded-lg text-black text-center relative left-110 bottom-16">
+                <div class="flex relative left-16 ">
+                    <img class="relative left-7" src="./images/activity.png ">
+                    <div class="ml-10 ">
+                        <p class="text-2xl ">Activity Log</p>
+                        <div class="activity-log"></div>
+                        <button id="clear-history-btn" class="clear-history bg-blue-400">Clear History
+                        </button>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+    </section>
+
+
+
+
+    <section class="grid grid-cols-3 pl-30 pr-30  gap-3 w-full ">
+        <section class="bg-[#f4f7ff] p-6 relative right-20  ">
+
+            <div class="p-4">
+                <p class=" mb-4 p-2 rounded-sm bg-white ">ShopEase</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl "> <b>Fix Mobile Button Issue</span><br></b> Debug using Chrome DevTools, check for<br> overlapping elements, and ensure onClick works <br> properly<br> and ensure onClick works properly</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="bg-[#f4f7ff] p-6 relative right-40 ">
+
+            <div class="p-4 ">
+                <p class=" p-2 rounded-sm bg-white ">CloudSync</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl"><b>Add Dark Mode</b></span><br>store the user's preference in <br> localStorage, update CSS variables <br> dynamically, and apply a <br> smooth transition effect.</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="bg-[#f4f7ff] p-6 relative right-40 ">
+
+            <div class="p-4 ">
+                <p class=" p-2 rounded-sm bg-white ">SwiftPay</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl"><b>Optimize Home page</span></b><br>Debug using Chrome DevTools,<br> check for overlapping elements, and <br>ensure onClick works properly<br> and ensure onClic</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="bg-[#f4f7ff] p-6 relative right-20 ">
+
+            <div class="p-4 ">
+                <p class="  p-2 rounded-sm bg-white ">Meta</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl"><b>Add new emoji</span></b><br>Debug using Chrome DevTools,<br> check for overlapping elements, and <br>ensure onClick works properly<br> and ensure onClick works properly</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="bg-[#f4f7ff] p-6 relative right-40 ">
+
+            <div class="p-4 ">
+                <p class="  p-2 rounded-sm bg-white ">Google LLC</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl"><b>Integrate OpenAI API</span> </b><br> Debug using Chrome DevTools,<br> check for overlapping elements, and <br> ensure onClick works properly <br> and ensure onClick works properly</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="bg-[#f4f7ff] p-6 relative right-40 ">
+
+            <div class="p-4 ">
+                <p class="  p-2 rounded-sm bg-white ">Glassdoar</p>
+                <p class="rounded-sm bg-white "><span class="text-2xl"><b>Improve Job searching</span></b><br> Debug using Chrome DevTools, check for<br> overlapping elements, and ensure onClick works properly<br> and ensure onClick works properly</p>
+                <br>
+
+
+                <p>Deadline</p>
+
+                <div class="flex ">
+                    <p>21 Match 2025</p>
+
+                    <button class="completed-btn relative left-10 bottom-5 rounded-sm w-55 h-10 bg-blue-500 ">Completed</button>
+                </div>
+            </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>

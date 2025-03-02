@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-[#f4f7ff]">
+
+    <nav class=" flex items-center justify-between md:container md:mx-auto flex-wrap bg-white">
+
+        <div>
+
+
+            <img src="./images/logo.png">
+        </div>
+
+
+        <p class="flex-1 text-4xl">Dev <span><b>Board</b></span></p>
+
+
+        <div class="flex gap-2">
+            <button id="backToDeskBtn" class="text-white rounded-lg bg-blue-500 w-40 h-15">
+            Back to Desk
+        </div>
+
+
+
+
+    </nav>
+
+    <section>
+        <div>
+            <p class="text-2xl justify-center text-center"><b>Blogs</b></p>
+        </div>
+
+        <div class="mt-10">
+            <p class="bg-white"><b>Question-1: What are the different ways to select an element in the DOM?</p></b>
+                <p class="bg-white">Using getElementById, using getElementsByClassName, using getElementsByTagName, using querySelector, using querySelectorAll, changing the Text Content, </p>
+        </div>
+
+
+        <div class="mt-10">
+            <p class="bg-white"><b>Question-2: What is the difference between innerHTML, innerText, and textContent ?</b></p>
+            <p class="bg-white">innerHTML: It reads both the HTML markup and the text content of the element.<br> innerText: It ignores HTML tags. And it also does not include text that is hidden with CSS styles.<br> textContent: It only deals with the raw text and doesn't
+                account for styles.</p>
+        </div>
+
+        <div class="mt-10">
+            <p class="bg-white"><b>Question-3: What is event delegation in the DOM?</b></p>
+            <p class="bg-white">It allows us to attach a single event listener for elements that exist now or in the future. </p>
+
+        </div>
+
+        <div class="mt-10">
+            <p class="bg-white"><b>Question-4: What is event bubbling in the DOM?
+
+            </b></p>
+            <p class="bg-white">It starts with an event triggering on the innermost element and then proceeds to trigger the same event on its parent element and then its parent's parent element and so on.</p>
+
+
+        </div>
+
+        <div class="mt-10">
+            <p class="bg-white"><b>Question-5: How do you create, add, and remove elements using JavaScript?</b></p>
+            <p class="bg-white">const para = document.createElement("p");<br> const node = document.createTextNode("This is a new paragraph.");<br> para.appendChild(node);
+                <br> const element = document. getElementById("div1");<br> element. appendChild(para);<br> const elmnt = document.getElementById("p1");<br> element.remove(); <br> const parent = document.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
