@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const clearHistoryBtn = document.getElementById("clear-history-btn");
 
+    const taskNames = [
+        "Fixing mobile Button issue",
+        "Adding Dark Mode",
+        "Optimizing Home Page",
+        "Adding new emoji",
+        "Integrating OpenAI API",
+        "Improving Job Searching"
+    ];
+
+    let taskIndex = 0;
+
     buttons.forEach((button) => {
         button.addEventListener("click", function() {
             if (!button.disabled) {
@@ -38,10 +49,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 let now = new Date();
                 let timeString = now.toLocaleTimeString();
 
+                const taskName = taskNames[taskIndex];
+
                 // Update activity log
                 let newData = document.createElement("p");
-                newData.textContent = `You have completed the task for mobile issue at ${timeString}`;
+                newData.textContent = `${taskIndex+1}You have completed the task for ${taskName} at ${timeString}`;
                 activityLog.appendChild(newData);
+
+                taskIndex++;
 
 
             }
