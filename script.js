@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const taskCountElement = document.querySelector(".task-count");
     const totalCountElement = document.querySelector(".total-count");
     const activityLog = document.querySelector(".activity-log");
-    const buttons = document.getElementsByClassName(".completed-btn");
-    const clearHistoryBtn = document.getElementById(".clear-history-btn");
+    const buttons = document.getElementsByClassName("completed-btn");
+    const clearHistoryBtn = document.getElementById("clear-history-btn");
+
 
 
     const taskNames = [
@@ -15,17 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
         "Adding new emoji",
         "Integrating OpenAI API",
         "Improving Job Searching"
-
     ];
 
-
     let taskIndex = 0;
+
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
-            if (!this.disabled && taskCountElement < taskNames.length) {
+            if (!this.disabled && taskIndex < taskNames.length) {
                 this.disabled = true;
-                this.classlist.add
-                alert("taskmeter.netlify.app says\nBoard updated successfully.");
+                this.style.backgroundColor = "gray";
+                alert("Board updated successfully.");
 
 
 
@@ -35,64 +35,71 @@ document.addEventListener("DOMContentLoaded", function() {
                 totalCountElement.textContent = totalCount;
 
 
-                let now = new Date();
-                let timeString = now.toLocaleTimeString();
+
+                const now = new Date();
+                const timeString = now.toLocaleTimeString();
 
 
-                let newData = document.createElement("p");
-                newData.textContent = `${taskIndex + 1}. You have completed the task for ${taskNames[taskIndex]} at ${timeString}`;
+                const newData = document.createElement("p");
+                newData.textContent = (taskIndex + 1) + ". You have completed the task: " + taskNames[taskIndex] + " at " + timeString;
                 activityLog.appendChild(newData);
 
                 taskIndex++;
-
-
-
-
-
             }
         });
     }
 
-    clearHistoryBtn.addEventListener("click", function() {
-        activityLog.innerHTML = "";
-    });
-
-});
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Fully loaded");
+    if (clearHistoryBtn) {
+        clearHistoryBtn.addEventListener("click", function() {
+            activityLog.innerHTML = "";
+        });
+    }
+
 
 
     const discoverBtn = document.getElementById("discoverBtn");
     if (discoverBtn) {
         discoverBtn.addEventListener("click", function() {
-            console.log("Discover Button clicked!");
             window.location.href = "./main.html";
         });
     }
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
     const backToDeskBtn = document.getElementById("backToDeskBtn");
     if (backToDeskBtn) {
         backToDeskBtn.addEventListener("click", function() {
-            console.log("Back To Desk Button clicked!");
             window.location.href = "./index.html";
         });
-    } else {
-        console.error("Back To Desk Button not found in the DOM.");
     }
+
 });
 
 
-const themeBtn = document.getElementById("theme-btn");
-const body = document.body;
 
-themeBtn.addEventListener("click", function() {
-    body.classList.toggle("bg-green-800");
-    body.classList.toggle("bg-yellow-800");
-    body.classList.toggle("bg-pink-800");
-    body.classList.toggle("bg-blue-800");
+document.addEventListener("DOMContentLoaded", function() {
+    const themeBtn = document.getElementById("theme-btn");
+    const body = document.body;
 
+
+
+    if (themeBtn) {
+        themeBtn.addEventListener("click", function() {
+
+
+            if (body.classList.contains("bg-[#f4f7ff]")) {
+                body.classList.replace("bg-[#f4f7ff]", "bg-blue-800");
+            } else if (body.classList.contains("bg-blue-800")) {
+                body.classList.replace("bg-blue-800", "bg-green-800");
+            } else if (body.classList.contains("bg-green-800")) {
+                body.classList.replace("bg-green-800", "bg-yellow-800");
+            } else if (body.classList.contains("bg-yellow-800")) {
+                body.classList.replace("bg-yellow-800", "bg-pink-800");
+            } else {
+                body.classList.replace("bg-pink-800", "bg-[#f4f7ff]");
+            }
+        });
+    }
 });
